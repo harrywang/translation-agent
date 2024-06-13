@@ -1,0 +1,26 @@
+When I teach Retrieval-Augmented Generation (RAG), I defined the “CAR” (Credibility, Accuracy, and Recency) problem to outline the common challenges faced by Large Language Models (LLMs) and to help my students easily remember and articulate the need for RAG. 😉
+
+The “CAR” problem can significantly impact LLMs’ performance and reliability:
+
+Credibility: LLMs often lack transparent and traceable reasoning processes, which can affect their credibility. Unlike humans, who can explain and justify their thought processes step-by-step, LLMs generate responses based on language patterns learned from vast datasets without a clear audit trail of the generation process. This can result in users developing mistrust towards LLMs.
+
+Accuracy: The Issue of Hallucination. One of the significant challenges with LLMs is their tendency to “hallucinate,” or generate information that is not factually correct. This issue arises because these models prioritize coherence and fluency over factual accuracy, often leading to the creation of plausible but incorrect or misleading content. This can be particularly problematic in settings where accuracy is paramount, such as educational content, medical advice, or news reporting.
+
+Recency: Handling of Outdated Information. LLMs are trained on datasets that may not include the most current events or developments, e.g. as of April 2024:
+
+gpt-4-turbo-2024-04-09’s training data is up to Dec 2023
+gpt-3.5-turbo-0125’s training data is up to Sep 2021
+
+The lag between real-world events and their representation in the training data can limit the usefulness of LLMs in scenarios where up-to-date information is crucial.
+
+Understanding and addressing “CAR” challenges is essential for improving the effectiveness and reliability of LLMs in various applications.
+
+RAG together with better prompt engineering offers an innovative approach to mitigating some of the “CAR” issues of LLMs by combining the internal knowledge of LLMs with dynamic, external data sources such as webpages, files, and databases:
+
+Enhancing Credibility through source attribution, i.e., references and citations.
+
+Improving Accuracy with proprietary and domain-specific information.
+
+Enabling Recency via methods such as Internet searches, integration of up-to-date external data sources, and calling external tool APIs.
+
+Therefore, teaching RAG should be a critical part of any basic GenAI courses. I used LangChain and ChromaDB to demonstrate basic concepts of RAG by creating a ChatPDF-like Q&A application.

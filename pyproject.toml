@@ -30,6 +30,7 @@ flake8 = "^7.0.0"
 pyright = "^1.1.362"
 pre-commit = "^3.7.1"
 ruff = "^0.4.4"
+ipykernel = "^6.29.4"
 
 [tool.poetry.group.test]
 optional = true

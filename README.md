@@ -28,10 +28,6 @@ To get started with `translation-agent`, follow these steps:
 ### Installation:
 - The Poetry package manager is required for installation. [Poetry Installation](https://python-poetry.org/docs/#installation) Depending on your environment, this might work:
 
-```bash
-pip install poetry 
-```
-
 - A .env file with a OPENAI_API_KEY is required to run the workflow. See the .env.sample file as an example.
 ```bash
 git clone https://github.com/andrewyng/translation-agent.git
@@ -71,3 +67,36 @@ A few academic research groups are also starting to look at LLM-based and agenti
 - *Beyond Human Translation: Harnessing Multi-Agent Collaboration for Translating Ultra-Long Literary Texts*, Wu et al. (2024),  https://arxiv.org/pdf/2405.11804
 
 
+## Notes by Harry Wang
+
+1. make poetry create venv in project folder so that VSCode can find it:
+
+https://stackoverflow.com/questions/59882884/vscode-doesnt-show-poetry-virtualenvs-in-select-interpreter-option
+
+
+```bash
+pip install poetry 
+poetry config virtualenvs.in-project true
+```
+
+
+```
+poetry env list  # shows the name of the current environment
+poetry env remove <current environment>
+poetry install  # will create a new environment using your updated configuration
+```
+
+2. Install ipykernel
+
+https://github.com/microsoft/vscode-jupyter/issues/11596
+
+<img width="344" alt="Screenshot 2024-06-13 at 4 41 52 PM" src="https://github.com/andrewyng/translation-agent/assets/595772/6529dbcb-a4f4-45f2-b497-7cfeb1d54c15">
+<img width="354" alt="Screenshot 2024-06-13 at 4 41 57 PM" src="https://github.com/andrewyng/translation-agent/assets/595772/37887437-8c7b-4731-aee9-88ee8410636b">
+
+```
+poetry shell
+poetry add ipykernel -G dev
+(translation-agent-py3.10) harrywang@m1-hw translation-agent % pip install ipykernel -U --force-reinstall
+```
+
+3. An English to Chinese translation example [notebook](examples/english-chinese-example.ipynb) and [output](https://gist.github.com/harrywang/05d9663342b22df21a77897c8114090f)
